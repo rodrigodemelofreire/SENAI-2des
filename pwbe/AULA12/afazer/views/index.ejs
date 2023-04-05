@@ -13,6 +13,19 @@
         <h1><%= titulo%></h1>
     </header>
     <main>
+        <div>
+            <form action="/create" method="POST">
+                <label for="descricao">Descricao:</label>
+                <textarea name="descricao" id="descricao" cols="30" rows="10"
+                    placeholder="Digite a descricao da sua tarefa"></textarea>
+                <label for="quando">Quando:</label>
+                <% hoje = new Date().toString%>
+                <input type="datetime-local" name="quando" id="quando" value="new Date()">
+                <input type="submit" value="Novo">
+            </div>
+
+
+
         <table>
             <thead>
                 <tr>

@@ -4,7 +4,7 @@ const express = require('express')
 const cors = require('cors')
 const methodOverride = require('method-override')
 
-const router = require('./src/routes/tarefa')
+const router = require('./src/routes/tarefa.js')
 
 const app = express()
 app.use(express.json())

@@ -1,6 +1,17 @@
 const con = require('../dao/connetc')
 const Tarefa = require('../models/tarefa')
 
+const cadastrar = (req, res) => {
+    con.query(new Tarefa(req.body).create(), (err,result) => {
+        if (err == null) {
+            res.render('index', { titulo: "Tarefas a Fazer", dados: result })
+        } else {
+            res.render('erro', {err: err})
+        }
+    })
+}
+
+
 const app = (req,res) =>{
     con.query(new Tarefa(req.body).read(),(err,result) =>{
         if(err == null){
@@ -11,8 +22,17 @@ const app = (req,res) =>{
     })
 }
 
+const alterar = (req, res) =>{
+    con.query(new Tarefa(req.body).update(), (err, result) =>{
+        if(result.affectedRows > 0)
+        res.redirect('/')
+    else
+        res.render('erro', {err: err})
+    })
+}
+
 const excluir = (req,res) =>{
-    con.querry(new Tarefa(req.params).del(),(err,result) =>{
+    con.query(new Tarefa(req.params).del(),(err,result) =>{
         if(result.affectedRows > 0)
             res.redirect('/')
         else
@@ -21,5 +41,8 @@ const excluir = (req,res) =>{
 }
 
 module.exports = {
-    app
+    cadastrar,
+    app,
+    alterar,
+    excluir
 }
