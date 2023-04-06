@@ -17,7 +17,7 @@ CREATE TABLE telefone (
 CREATE TABLE veiculo(
     placa VARCHAR(10) NOT NULL PRIMARY KEY,
     modelo VARCHAR(10) NOT NULL,
-    marca VARCHAR(10) not NULL,
+    marca VARCHAR(10) NOT NULL,
     ano INT NOT NULL
 );
 
