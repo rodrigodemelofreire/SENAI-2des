@@ -1,0 +1,19 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+header{
+    background-image: url(/frontend/assets/loginm/undraw_breakfast_psiw\ \(1\).svg);
+    background-size: 125px;
+    background-repeat: no-repeat;
+    margin: 15px;
+    height: 100px;
+}
+
+#cima{
+    float: right;
+    display: flex;
+}

@@ -43,10 +43,35 @@ const excluir = (req, res) => {
     })
 }
 
+const logar = (req, res) => {
+    const {email, senha} = req.body;
+
+    let query = `SELECT * FROM cliente WHERE email = '${email}' AND senha = '${senha}'`;
+    console.log(query)
+
+    con.query(query, (err, response) => {
+        if(err == undefined){
+            if(response.length == 0) {
+                res.status(401).json({"msg":"Matricula ou Senha Invalidos"}).end();
+            }else {
+                let cliente = response[0];
+    
+                delete cliente.senha;
+    
+                res.status(200).json(cliente).end();
+            }
+        }else {
+            res.status(401).json(err).end();
+        }
+    });
+}
+
+
 module.exports = {
     teste,
     criar,
     listar,
     alterar,
-    excluir
+    excluir,
+    logar
 }

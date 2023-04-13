@@ -1,13 +1,13 @@
 const con = require('../dao/connect')
-const Cardapio = require('../models/cardapio')
+const Restaurante = require('../models/restaurante')
 
-const teste = (req, res) => {
-    res.json("Cardapio Respondendo").end()
+const teste = (req, res) =>{
+    res.json("Restaurante ta funfa").end()
 }
 
 const criar = (req, res) => {
-    let cardapio = new Cardapio(req.body)
-    con.query(cardapio.create(), (err, result) => {
+    let restaurante = new Restaurante(req.body)
+    con.query(restaurante.create(), (err, result) => {
         if (err == null)
             res.status(201).end()
         else
@@ -16,16 +16,16 @@ const criar = (req, res) => {
 }
 
 const listar = (req, res) => {
-    let cardapio = new Cardapio(req.params)
-    con.query(cardapio.read(), (err, result) => {
+    let restaurante = new Restaurante(req.params)
+    con.query(restaurante.read(), (err, result) => {
         if (err == null)
             res.json(result).end()
     })
 }
 
 const alterar = (req, res) => {
-    let cardapio = new Cardapio(req.body)
-    con.query(cardapio.update(), (err, result) => {
+    let restaurante = new Restaurante(req.body)
+    con.query(restaurante.update(), (err, result) => {
         if (result.affectedRows > 0)
             res.status(202).end()
         else
@@ -34,8 +34,8 @@ const alterar = (req, res) => {
 }
 
 const excluir = (req, res) => {
-    let cardapio = new Cardapio(req.params)
-    con.query(cardapio.delete(), (err, result) => {
+    let restaurante = new Restaurante(req.params)
+    con.query(restaurante.delete(), (err, result) => {
         if (result.affectedRows > 0)
             res.status(204).end()
         else
