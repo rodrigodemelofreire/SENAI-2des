@@ -17,3 +17,19 @@ const showOptionsCategorias = async (data) => {
         selectCategorias.append(option)
     });
 }
+
+var botao = document.getElementById('ver-mais');
+botao.addEventListener('click', function() {
+
+    $.ajax({
+    url: 'localhost:3000/cardapio/listar',
+    success: function(dados) {
+ 
+        var tabela = document.getElementById('minha-tabela');
+      tabela.innerHTML = dados;
+  
+      tabela.style.display = 'table';
+    }
+  });
+});
+

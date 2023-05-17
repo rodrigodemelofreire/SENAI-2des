@@ -14,6 +14,7 @@ body{
     flex-direction: column;
     justify-content: space-between;
     background-color: #a9cdf4;
+
 }
 
 header{
@@ -50,8 +51,22 @@ main{
 }
 
 #opcoes-categorias {
-    z-index: 100;
+    z-index:
+     100;
 }
+
+select{
+    background-color: #2196F3;
+    border-radius: 4px;
+    color: #ffffff;
+    display: block;
+    margin-top: 8px;
+    padding: 8px;
+    text-align: center;
+    text-decoration: none;  
+    border-style: none;
+    cursor: pointer;
+    }
 
 #caminhos{
     background-color: #2196F3;
@@ -63,11 +78,6 @@ main{
     text-align: center;
     text-decoration: none;  
     border-style: none;
-    
-}
-
-#caminhos :hover{
-    background-color: #0d47a1;
 }
 
 .container {
@@ -85,6 +95,7 @@ main{
     width: 100%;
     padding: 12px;
     border-style: none ;
+    cursor: pointer;
 }
 
 .restaurant-card {

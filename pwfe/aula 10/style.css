@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    text-align: center;
+}
+
+body{
+    background-color: cadetblue;
+    text-align: center;
+}
+
+h1{
+    padding-top: 25px;
+}
+
+button{
+    border-style: none;
+    cursor: pointer;
+}

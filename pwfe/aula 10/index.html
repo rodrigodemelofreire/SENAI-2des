@@ -7,12 +7,27 @@
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="/api.js"></script>
     <title>Previsão do Tempo</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <header></header>
-    <section>
+    <header>
         <h1>A previsão do tempo diz que o céu fechou</h1>
+    </header>
+    <section>
+        <h1>Condição do Clima</h1>
+        <label for="cidadeInput">Digite o nome da cidade:</label>
+            <br>
+        <input type="text" id="cidadeInput" name="cidadeInput">
+            <br>
+        <button onclick="obterClima()">Obter Clima</button>
+            <br>
         <p id="temperatura"></p>
+        <span id="condicaoClima"></span>
+        <img id="imagemClima" src="">
+    </section>
+    <section>
+        <div>
+        </div>
     </section>
 </body>
     <script src="/index.js"></script>
