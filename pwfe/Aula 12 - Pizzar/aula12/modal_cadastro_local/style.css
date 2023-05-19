@@ -1,71 +1,108 @@
-*{
-    padding: 0;
+ @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap');
+
+  body {
+    font-family: Arial, sans-serif;
     margin: 0;
-    box-sizing: border-box;
+    padding: 0;
 }
-body{
-    width: 100%;
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+#titulo {
+    font-family: 'Caveat', cursive;
+    color: red;
+    font-size: 50px;
+}
+
+main {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-header{
-    width: 100%;
-    height: 10vh;
-    display: flex;
-    padding-top: 25px;
-    flex-direction: column;
-    align-items: center;
-    color: #ffffff;
-    background-image: url(./images/pedaco-cortado-pizzaria-copacabana-rio-de-janeiro.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
+    margin-top: 20px;
 }
 
+#oGato {
+    width: auto;
+    height: 8vh;
+}
 
-main{
-    width: 100%;
-    height: auto;
-    display: flex;
+.cima {
     padding: 12px;
-    flex-direction: column;
-    align-items: center;
-    font-size: 25px;
+
 }
 
-footer{
+input#car {
+    height: 50px;
+    border: none;
+    text-decoration: none;
+    display: inline-block;
+}
+
+table {
+    border-collapse: collapse;
+    width: 80%;
+    max-width: 800px;
+}
+
+th,
+td {
+    text-align: left;
+    padding: 8px;
+}
+
+th {
+    background-color: #242424;
+    color: #fff;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #878787;
+}
+
+#butaozin {
+    color: #ffffff;
+    background-color: #4CAF50;
+    border-style: none;
+}
+
+footer {
+    position: fixed;
     width: 100%;
-    height: 10vh;
+    bottom: 0;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.modal {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    border-top: 1px solid #000;
-}
-
-.modal{
-    position: absolute;
-    top:0;
+    position: fixed;
+    z-index: 1;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.5);
+    top: 0;
     width: 100%;
     height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
-.corpoModal{
-    position: relative;
-    border: 1px solid #000;
-    top: 20vh;
-    width: 50vw;
-    height: 50vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #fff;
+.corpoModal {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
 }
 
-.oculto{
+.oculto {
     display: none;
 }
