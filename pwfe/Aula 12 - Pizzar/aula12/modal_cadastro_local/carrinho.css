@@ -1,0 +1,165 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+header {
+  background-color: #ff3d3d;
+  padding: 10px;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+#titulo {
+  margin: 0;
+  padding: 0;
+}
+
+#oGato {
+  width: 40px;
+  height: 40px;
+  margin-left: 10px;
+}
+
+#titulo {
+  margin: 0;
+  padding: 0;
+}
+
+#cima {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#cima a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #333;
+}
+
+#cima input {
+  background-color: transparent;
+  border: none;
+  padding: 5px 10px;
+  color: #333;
+  cursor: pointer;
+}
+
+#cima span {
+  margin-left: 5px;
+}
+
+main {
+  padding: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  background-color: #ccc;
+}
+
+th {
+  padding: 10px;
+  text-align: left;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#cart {
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+#cart h2 {
+  margin-top: 0;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+#cart ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#cart li {
+  margin-bottom: 10px;
+}
+
+#cart li span {
+  font-weight: bold;
+}
+
+#checkout-btn {
+  background-color: #ff3d3d;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.corpoModal {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 400px;
+}
+
+.oculto {
+  display: none;
+}
+
+.modal .corpoModal {
+  background-color: white;
+  padding: 20px;
+}
+
+.modal .corpoModal button {
+  background-color: #ff3d3d;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}

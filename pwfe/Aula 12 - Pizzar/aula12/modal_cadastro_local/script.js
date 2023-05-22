@@ -283,17 +283,15 @@ function abrirModal(i) {
 
 function cadastarLocal() {
    const item = {
-      id: document.querySelector("#id").value,
-      nome: document.querySelector("#nome").value
+      id: document.querySelector("#id").innerHTML,
+      nome: document.querySelector("#nome").innerHTML,
+      descricao: document.querySelector("#descricao").innerHTML,
+      preco: document.querySelector("#preco").innerHTML
    }
 
-   //Abrir ou iniciar a lista de produtos
    const produtos = JSON.parse(window.localStorage.getItem("produtos")) || []
-   //Acrescentar o novo item na lista
    produtos.push(item)
-   //Salvar a lista no armazenamento local
    window.localStorage.setItem("produtos", JSON.stringify(produtos))
 
-   //Recarregar a página
    window.location.reload()
 }
