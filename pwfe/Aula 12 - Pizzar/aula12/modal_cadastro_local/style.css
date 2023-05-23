@@ -45,14 +45,20 @@ header {
     text-decoration: none;
     color: white;
   }
-  
 
-  #pedido {
+  #pedido, #carrinho {
     background-color: #fff;
     color: #ff3d3d;
     border: none;
     padding: 5px 10px;
     cursor: pointer;
+  }
+
+  #pedido:hover , #carrinho:hover {
+    color: #fefefe;
+    background-color: #0f984d;
+    transition: 0.3s;
+    
   }
   
 main {
@@ -60,26 +66,7 @@ main {
     flex-direction: column;
     align-items: center;
     margin-top: 20px;
-}
-  
-  #car {
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    vertical-align: middle;
-    margin-right: 5px;
-  }
-  
-  #car:hover {
-    filter: brightness(80%); /* Reduz a luminosidade ao passar o mouse */
-  }
-  
-  #car-label {
-    display: inline-block;
-    vertical-align: middle;
-    color: #ffffff;
-  }
-  
+} 
 
 table {
     border-collapse: collapse;
@@ -103,10 +90,25 @@ tbody tr:nth-child(even) {
 }
 
 #butaozin {
-    color: #ffffff;
-    background-color: #4CAF50;
-    border-style: none;
+  color: #ffffff;
+  background-color: #4CAF50;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
 }
+
+#butaozin:hover {
+  background-color: #1f6323;
+}
+
+#butaozin:focus {
+  outline: none;
+  box-shadow: 0 0 5px #45a049;
+}
+
 
 footer {
     position: fixed;
@@ -150,10 +152,10 @@ footer {
     border: none;
     padding: 10px 20px;
     cursor: pointer;
+
 }
 
 #btCadastrar:hover {
-    color: #333;
     transition: 0.3s;
-    background-color: #00d165; 
+    background-color: #00ae54; 
 }
