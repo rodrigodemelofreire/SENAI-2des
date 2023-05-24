@@ -20,13 +20,18 @@ function preecherTabela() {
             const id = document.createElement("p");
             const nome = document.createElement("p");
             const preco = document.createElement("p");
+            const l = document.createElement("hr");
+
             id.innerHTML = p.id;
             nome.innerHTML = p.nome;
             preco.innerHTML = p.preco;
+
             Assando.appendChild(id);
             Assando.appendChild(nome);
             Assando.appendChild(preco);
+            Assando.appendChild(l);
         })
+        
         linha.appendChild(data);
         linha.appendChild(Assando);
         tcorpo.appendChild(linha)
@@ -45,7 +50,3 @@ function limparDados() {
 }
   
   preecherTabela();
- 
-  
-  
-  

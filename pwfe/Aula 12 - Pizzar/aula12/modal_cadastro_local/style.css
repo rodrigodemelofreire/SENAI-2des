@@ -139,7 +139,18 @@ footer {
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
-    max-width: 400px;
+    width: 800px;
+    height: 400px;
+}
+
+#detalhes{
+    text-align: center;
+    padding: 25px;
+}
+
+#id{
+    text-align: center;
+    padding: 25px;
 }
 
 .oculto {
